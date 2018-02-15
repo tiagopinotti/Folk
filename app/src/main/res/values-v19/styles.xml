@@ -8,12 +8,20 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowTranslucentStatus">false</item>
     </style>
-
+    <!-- No Action Bar. -->
     <style name="AppThemeTransparent" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowTranslucentStatus">true</item>
     </style>
+
+    <!-- Base Theme Overlay. -->
+    <style name="AppThemeOverlay" parent="Base.ThemeOverlay.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
 </resources>

@@ -10,14 +10,19 @@
         <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
         <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
     </style>
-
+    <!-- No Action Bar. -->
     <style name="AppThemeTransparent" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
 
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    <!-- Base Theme Overlay. -->
+    <style name="AppThemeOverlay" parent="Base.ThemeOverlay.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
     </style>
 </resources>

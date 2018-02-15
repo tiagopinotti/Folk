@@ -20,5 +20,12 @@
     <!-- System Options Menu -->
     <string name="share">Share</string>
     <string name="settings">Settings</string>
+    <string name="media">Media</string>
+    <string name="search">Search</string>
 
+    <!-- Stories Section Default -->
+    <string name="story_title">Duden flows</string>
+    <string name="story_description">Even the all-powerful Pointing has no control about the
+        blind texts it is an almost unorthographic life One day however a small line of blind text by
+        the name of Lorem Ipsum decided to leave for the far World of Grammar.</string>
 </resources>
