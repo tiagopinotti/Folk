@@ -24,6 +24,12 @@ public class CharacterDataSource {
         this.description = description;
     }
 
+    public CharacterDataSource(ImageView imageView, String title, String description) {
+        this.imageView = imageView;
+        this.title = title;
+        this.description = description;
+    }
+
     public String getTitle() {
         return title;
     }
