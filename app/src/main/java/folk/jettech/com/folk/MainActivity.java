@@ -6,9 +6,11 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -38,34 +40,27 @@ public class MainActivity extends AppCompatActivity {
 
         userModels = new ArrayList<>();
 
+        userModels.add(new UserModel(getResources().getString(R.string.story_title), "This is a Staggered Grid Layout on Action"));
+
         userModels.add(new UserModel(getResources().getString(R.string.story_title), getResources().getString(R.string.story_description)));
         userModels.add(new UserModel(getResources().getString(R.string.story_title), getResources().getString(R.string.story_description)));
-        userModels.add(new UserModel(getResources().getString(R.string.story_title), getResources().getString(R.string.story_description)));
-        userModels.add(new UserModel(getResources().getString(R.string.story_title), getResources().getString(R.string.story_description)));
+        userModels.add(new UserModel(getResources().getString(R.string.story_title), "This is a Staggered Grid Layout on Action"));
         userModels.add(new UserModel(getResources().getString(R.string.story_title), getResources().getString(R.string.story_description)));
         userModels.add(new UserModel(getResources().getString(R.string.story_title), getResources().getString(R.string.story_description)));
         userModels.add(new UserModel(getResources().getString(R.string.story_title), getResources().getString(R.string.story_description)));
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
-        LinearLayoutManager layoutManager = getLinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false, mRecyclerView);
-        mRecyclerView.setLayoutManager(layoutManager);
+        StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        mRecyclerView.setLayoutManager(staggeredGridLayoutManager);
 
         mLineAdapter = new LineAdapter(userModels);
         mRecyclerView.setAdapter(mLineAdapter);
 
-        // ItemDecorator
         //mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
 
-    }
-
-    public LinearLayoutManager getLinearLayoutManager(Context context, int LINEAR_LAYOUT_ORIENTATION_PARAM, boolean reverseLayout, RecyclerView recyclerView) {
-        if(LINEAR_LAYOUT_ORIENTATION_PARAM == LinearLayoutManager.VERTICAL){
-            return new LinearLayoutManager(context, LINEAR_LAYOUT_ORIENTATION_PARAM, reverseLayout);
-        }else{
-            recyclerView.addItemDecoration(new DividerItemDecoration(context, DividerItemDecoration.HORIZONTAL));
-            return new LinearLayoutManager(context, LINEAR_LAYOUT_ORIENTATION_PARAM, reverseLayout);
-        }
     }
 
     @Override

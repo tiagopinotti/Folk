@@ -7,4 +7,11 @@
     <dimen name="default_caption_font_size">12sp</dimen>
 
     <dimen name="default_text_layout_padding">10dp</dimen>
+
+    <!-- Card Setup -->
+    <dimen name="default_card_inner_padding">8dp</dimen>
+    <dimen name="default_card_margin">16dp</dimen>
+    <dimen name="default_card_radius_corner">2dp</dimen>
+    <dimen name="default_card_sides_margin">2dp</dimen>
+
 </resources>
