@@ -1,14 +1,25 @@
 package folk.jettech.com.folk.res.recycler.res.recycler.datasource;
 
+import android.widget.ImageView;
+
 /**
  * Created by eduardo.willian on 15/02/2018.
  */
 
-public class UserModel {
+public class CharacterDataSource {
 
     private String title, description;
+    private ImageView imageView;
 
-    public UserModel(String title, String description) {
+    public ImageView getImageView() {
+        return imageView;
+    }
+
+    public void setImageView(ImageView imageView) {
+        this.imageView = imageView;
+    }
+
+    public CharacterDataSource(String title, String description) {
         this.title = title;
         this.description = description;
     }

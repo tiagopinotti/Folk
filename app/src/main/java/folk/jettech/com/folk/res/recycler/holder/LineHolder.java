@@ -15,13 +15,11 @@ import folk.jettech.com.folk.R;
 public class LineHolder extends RecyclerView.ViewHolder {
 
     private TextView title, description;
-    private Button button;
 
     public LineHolder(View itemView) {
         super(itemView);
         title = (TextView) itemView.findViewById(R.id.title_item);
         description = (TextView) itemView.findViewById(R.id.description_item);
-        button = (Button) itemView.findViewById(R.id.button_item);
     }
 
     public TextView getTitle() {
@@ -40,11 +38,4 @@ public class LineHolder extends RecyclerView.ViewHolder {
         this.description = description;
     }
 
-    public Button getButton() {
-        return button;
-    }
-
-    public void setButton(Button button) {
-        this.button = button;
-    }
 }

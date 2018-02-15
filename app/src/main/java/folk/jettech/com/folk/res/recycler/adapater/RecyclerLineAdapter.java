@@ -4,23 +4,21 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 import folk.jettech.com.folk.R;
 import folk.jettech.com.folk.res.recycler.holder.LineHolder;
-import folk.jettech.com.folk.res.recycler.res.recycler.datasource.UserModel;
+import folk.jettech.com.folk.res.recycler.res.recycler.datasource.CharacterDataSource;
 
 /**
  * Created by eduardo.willian on 15/02/2018.
  */
 
-public class LineAdapter extends RecyclerView.Adapter<LineHolder> {
+public class RecyclerLineAdapter extends RecyclerView.Adapter<LineHolder> {
 
-    private final List<UserModel> mUsers;
+    private final List<CharacterDataSource> mUsers;
 
-    public LineAdapter(List users) {
+    public RecyclerLineAdapter(List users) {
         mUsers = users;
     }
 
