@@ -47,8 +47,6 @@ public class MainActivity extends AppCompatActivity {
         characterDataSources.add(new CharacterDataSource("Physical properties", "Material has varying x & y dimensions (measured in dp) and a uniform thickness (1dp)."));
         characterDataSources.add(new CharacterDataSource("Transforming material ", "When split, material can heal. For example, if you remove a portion of material from a sheet of material, the sheet of material will become a whole sheet again. "));
 
-
-
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
         /** StaggeredGridLayoutManager - @Params
