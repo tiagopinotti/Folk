@@ -8,7 +8,7 @@ import java.util.List;
 
 import folk.jettech.com.folk.R;
 import folk.jettech.com.folk.res.recycler.holder.LineHolder;
-import folk.jettech.com.folk.res.recycler.res.recycler.datasource.CharacterDataSource;
+import folk.jettech.com.folk.res.recycler.res.recycler.entities.Persona;
 
 /**
  * Created by eduardo.willian on 15/02/2018.
@@ -16,7 +16,7 @@ import folk.jettech.com.folk.res.recycler.res.recycler.datasource.CharacterDataS
 
 public class RecyclerLineAdapter extends RecyclerView.Adapter<LineHolder> {
 
-    private final List<CharacterDataSource> mUsers;
+    private final List<Persona> mUsers;
 
     public RecyclerLineAdapter(List users) {
         mUsers = users;
@@ -24,17 +24,20 @@ public class RecyclerLineAdapter extends RecyclerView.Adapter<LineHolder> {
 
     @Override
     public LineHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new LineHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.character_item_view, parent, false));
+        return new LineHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.persona_card_view, parent, false));
     }
 
     @Override
     public void onBindViewHolder(LineHolder holder, int position) {
         holder.getTitle().setText(mUsers.get(position).getTitle());
         holder.getDescription().setText(mUsers.get(position).getDescription());
+        holder.getImageView().setImageResource(mUsers.get(position).getImageSource());
     }
 
     @Override
     public int getItemCount() {
         return mUsers != null ? mUsers.size() : 0;
     }
+
+
 }

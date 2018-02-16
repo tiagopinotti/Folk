@@ -8,30 +8,30 @@ import android.view.ViewGroup;
 import java.util.List;
 
 import folk.jettech.com.folk.R;
-import folk.jettech.com.folk.res.recycler.holder.ListHolder;
-import folk.jettech.com.folk.res.recycler.res.recycler.datasource.CharacterDataSource;
+import folk.jettech.com.folk.res.recycler.holder.LineHolder;
+import folk.jettech.com.folk.res.recycler.res.recycler.entities.Persona;
 
 /**
  * Created by Eduardo Mendes on 15/02/2018.
  */
 
-public class RecyclerListAdapter extends RecyclerView.Adapter<ListHolder> {
+public class RecyclerListAdapter extends RecyclerView.Adapter<LineHolder> {
 
-    private final List<CharacterDataSource> mUsers;
+    private final List<Persona> mUsers;
 
     public RecyclerListAdapter(List users) {
         mUsers = users;
     }
 
     @Override
-    public ListHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new ListHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.character_item_view, parent, false));
+    public LineHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        return new LineHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.persona_list_item_view, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(ListHolder holder, int position) {
-        holder.getPrimaryText().setText(mUsers.get(position).getTitle());
-        holder.getSecondaryText().setText(mUsers.get(position).getDescription());
+    public void onBindViewHolder(LineHolder holder, int position) {
+        holder.getTitle().setText(mUsers.get(position).getTitle());
+        holder.getDescription().setText(mUsers.get(position).getDescription());
         holder.getImageView().setImageResource(R.drawable.material_flat);
     }
 

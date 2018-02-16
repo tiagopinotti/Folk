@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@android:color/background_light"
     android:fitsSystemWindows="true"
-    tools:context="folk.jettech.com.folk.MainActivity">
+    tools:context="folk.jettech.com.folk.CategorySelectorActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/main.appbar"
@@ -24,7 +24,7 @@
             app:expandedTitleMarginEnd="64dp"
             app:expandedTitleMarginStart="@dimen/activity_horizontal_margin"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:title="@string/title"
+            app:title="@string/section_title"
             app:titleEnabled="true">
 
             <ImageView
