@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/story"
-        android:title="@string/search" />
 
-    <item
-        android:id="@+id/myths"
-        android:title="@string/search" />
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/story"
+            android:icon="@drawable/ic_book_black_24dp"
+            android:title="@string/search" />
+        <item
+            android:id="@+id/content"
+            android:icon="@drawable/ic_book_black_24dp"
+            android:title="@string/settings" />
 
-    <item
-        android:id="@+id/gods"
-        android:title="@string/search" />
+        <item
+            android:id="@+id/gods"
+            android:icon="@drawable/ic_book_black_24dp"
+            android:title="@string/section" />
+        <item
+            android:id="@+id/search"
+            android:icon="@drawable/ic_book_black_24dp"
+            android:title="@string/media" />
+        <item
+            android:id="@+id/help"
+            android:icon="@drawable/ic_book_black_24dp"
+            android:title="@string/settings" />
 
-    <item
-        android:id="@+id/extra"
-        android:title="@string/search" />
-
-    <item
-        android:id="@+id/content"
-        android:title="@string/search" />
-
+    </group>
 </menu>
