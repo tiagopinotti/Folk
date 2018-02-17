@@ -29,6 +29,8 @@
         blind texts it is an almost unorthographic life One day however a small line of blind text by
         the name of Lorem Ipsum decided to leave for the far World of Grammar.</string>
 
-    <!-- Sections -->
+    <!-- Main Sections -->
     <string name="section_title">Category Section</string>
+    <string name="section_description">A light description of this section available for the users. Check out now this stories!</string>
+
 </resources>
