@@ -32,7 +32,7 @@ public class MainScreenActivity extends AppCompatActivity {
     private ViewPager mViewPager;
     private PagerAdapter mPageAdapter;
 
-    public static final int NUM_PAGES = 5;
+    public static final int NUM_PAGES = 10;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
