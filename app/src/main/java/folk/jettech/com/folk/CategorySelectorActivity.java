@@ -85,8 +85,8 @@ public class CategorySelectorActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar_main_activity);
         setSupportActionBar(toolbar);
 
-        actionBar = getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         setupRecycler();
     }
