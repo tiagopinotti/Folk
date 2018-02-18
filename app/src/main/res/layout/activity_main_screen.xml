@@ -5,6 +5,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/background_light"
     tools:context="folk.jettech.com.folk.MainScreenActivity">
 
     <android.support.design.widget.NavigationView
@@ -13,23 +14,6 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         app:menu="@menu/main_navigation_drawer_menu">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:orientation="vertical"
-            android:padding="@dimen/activity_horizontal_margin">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:text="@string/title"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:textColor="@android:color/white" />
-
-        </RelativeLayout>
 
     </android.support.design.widget.NavigationView>
 
@@ -83,6 +67,7 @@
                 android:orientation="vertical">
 
                 <android.support.v7.widget.CardView
+                    android:id="@+id/section_decored_category"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/default_card_sides_margin"
@@ -98,11 +83,27 @@
                         android:background="@drawable/card_section_background"
                         android:orientation="vertical">
 
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="top|start"
+                            android:layout_margin="@dimen/default_card_inner_padding"
+                            android:src="@drawable/ic_whatshot_black_24dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/default_card_inner_padding"
+                            android:paddingRight="@dimen/default_card_inner_padding"
+                            android:text="@string/section"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                            android:textColor="@android:color/white"
+                            android:textStyle="italic" />
+
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="@dimen/activity_horizontal_margin"
-                            android:layout_marginTop="@dimen/activity_horizontal_margin"
                             android:paddingLeft="@dimen/default_card_inner_padding"
                             android:paddingRight="@dimen/default_card_inner_padding"
                             android:text="@string/section_title"
@@ -146,11 +147,27 @@
                         android:layout_height="match_parent"
                         android:orientation="vertical">
 
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="top|start"
+                            android:layout_margin="@dimen/default_card_inner_padding"
+                            android:src="@drawable/ic_new_releases_black_24dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/default_card_inner_padding"
+                            android:paddingRight="@dimen/default_card_inner_padding"
+                            android:text="@string/section"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                            android:textColor="@android:color/secondary_text_light"
+                            android:textStyle="italic" />
+
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="@dimen/activity_horizontal_margin"
-                            android:layout_marginTop="@dimen/activity_horizontal_margin"
                             android:paddingLeft="@dimen/default_card_inner_padding"
                             android:paddingRight="@dimen/default_card_inner_padding"
                             android:text="@string/section_title"
@@ -176,12 +193,55 @@
 
                         </android.support.v7.widget.RecyclerView>
 
-
                     </LinearLayout>
-
 
                 </android.support.v7.widget.CardView>
 
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/default_card_sides_margin"
+                    android:elevation="@dimen/cardview_default_elevation"
+                    android:padding="@dimen/default_card_inner_padding"
+                    app:cardElevation="@dimen/cardview_default_elevation"
+                    app:cardBackgroundColor="@color/orangeAccent"
+                    app:cardCornerRadius="@dimen/default_card_radius_corner">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="start"
+                        android:orientation="vertical"
+                        android:padding="@dimen/default_card_inner_padding">
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                            android:text="@string/story_title"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                            android:textColor="@android:color/white" />
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                            android:maxLines="3"
+                            android:text="@string/story_description"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                            android:textColor="@android:color/white" />
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/more"
+                            android:textStyle="italic"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+                            android:textColor="@android:color/white" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
 
             </LinearLayout>
 

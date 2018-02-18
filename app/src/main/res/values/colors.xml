@@ -13,4 +13,11 @@
     <color name="secondaryTitleColor">#4a6274</color>
     <color name="tertiaryTitleColor">#3792da</color>
     <color name="overlaySolidColor">#c83792da</color>
+
+    <color name="orangeAccent">#e63e1c</color>
+    <color name="greenAccent">#11ca80</color>
+    <color name="purpleAccent">#6a35cc</color>
+    <color name="limeAccent">#aace2a</color>
+    <color name="blueAccent">#1691e9</color>
+    <color name="redAccent">#ca1d46</color>
 </resources>
