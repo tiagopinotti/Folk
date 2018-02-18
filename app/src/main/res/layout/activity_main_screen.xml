@@ -186,6 +186,11 @@
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
                             android:textColor="@android:color/tertiary_text_light" />
 
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/view_pager_items"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"/>
+
                         <android.support.v7.widget.RecyclerView
                             android:id="@+id/simple_items"
                             android:layout_width="match_parent"
@@ -203,9 +208,9 @@
                     android:layout_margin="@dimen/default_card_sides_margin"
                     android:elevation="@dimen/cardview_default_elevation"
                     android:padding="@dimen/default_card_inner_padding"
-                    app:cardElevation="@dimen/cardview_default_elevation"
                     app:cardBackgroundColor="@color/orangeAccent"
-                    app:cardCornerRadius="@dimen/default_card_radius_corner">
+                    app:cardCornerRadius="@dimen/default_card_radius_corner"
+                    app:cardElevation="@dimen/cardview_default_elevation">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -235,9 +240,9 @@
                             android:layout_width="150dp"
                             android:layout_height="wrap_content"
                             android:text="@string/more"
-                            android:textStyle="italic"
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
-                            android:textColor="@android:color/white" />
+                            android:textColor="@android:color/white"
+                            android:textStyle="italic" />
 
                     </LinearLayout>
 

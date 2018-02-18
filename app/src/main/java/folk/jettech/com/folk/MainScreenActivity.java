@@ -1,6 +1,8 @@
 package folk.jettech.com.folk;
 
 import android.os.Bundle;
+import android.support.v4.view.PagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
@@ -15,6 +17,8 @@ import java.util.List;
 import folk.jettech.com.folk.res.recycler.adapater.RecyclerItemBookAdapter;
 import folk.jettech.com.folk.res.recycler.adapater.RecyclerLineAdapter;
 import folk.jettech.com.folk.res.recycler.res.recycler.entities.Persona;
+import folk.jettech.com.folk.ui.view.viewpager.ViewPagerAdapter;
+import folk.jettech.com.folk.ui.view.viewpager.ui.view.viewpager.animation.DepthInViewPager;
 
 public class MainScreenActivity extends AppCompatActivity {
 
@@ -25,13 +29,24 @@ public class MainScreenActivity extends AppCompatActivity {
     private RecyclerItemBookAdapter recyclerItemBookAdapter;
     private List<Persona> personas;
 
+    private ViewPager mViewPager;
+    private PagerAdapter mPageAdapter;
+
+    public static final int NUM_PAGES = 5;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mRecyclerViewMain = (RecyclerView) findViewById(R.id.recycler_view_main);
-        mRecyclerViewItem = (RecyclerView)findViewById(R.id.simple_items);
+        mRecyclerViewItem = (RecyclerView) findViewById(R.id.simple_items);
+
+        mViewPager = (ViewPager) findViewById(R.id.view_pager_items);
+        mPageAdapter = new ViewPagerAdapter(getSupportFragmentManager());
+        mViewPager.setAdapter(mPageAdapter);
+        mViewPager.setPageTransformer(true, new DepthInViewPager());
+
         personas = new ArrayList<>();
 
         personas.add(new Persona("Title", "Item description"));
